@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <SeekBar
+        android:id="@+id/sb_painter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/hsv_color_picker"
+        android:layout_alignRight="@+id/ll_paint_item"
+        android:padding="10dp"
+        android:visibility="gone" />
+
+    <HorizontalScrollView
+        android:id="@+id/hsv_color_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_paint_panel"
+        android:scrollbars="none"
+        android:visibility="gone">
+
+        <RadioGroup
+            android:id="@+id/rg_colors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btn_paint_panel"
+            android:checkedButton="@+id/rb_color_black"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:visibility="visible">
+
+            <RadioButton
+                android:id="@+id/rb_color_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:background="@color/material_light_black"
+                android:padding="5dp"
+                android:text="黑色"
+                android:textColor="@color/material_light_white" />
+
+            <RadioButton
+                android:id="@+id/rb_color_red"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:background="@color/material_light_red"
+
+                android:padding="5dp"
+                android:text="红色" />
+
+            <RadioButton
+                android:id="@+id/rb_color_yellow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+
+                android:background="@color/material_light_yellow"
+                android:padding="5dp"
+                android:text="黄色" />
+
+            <RadioButton
+                android:id="@+id/rb_color_green"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:background="@color/material_light_green"
+                android:padding="5dp"
+                android:text="绿色" />
+
+            <RadioButton
+                android:id="@+id/rb_color_blue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:background="@color/material_light_blue"
+                android:padding="5dp"
+                android:text="蓝色" />
+        </RadioGroup>
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_paint_item"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/btn_paint_panel"
+        android:layout_marginLeft="20dp"
+        android:background="@color/paint_panel_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/iv_paint_brush_radius"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/transparent"
+            android:padding="10dp"
+            android:src="@drawable/ic_paint_brush_radius" />
+
+        <ImageButton
+            android:id="@+id/iv_paint_color_picker"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/transparent"
+            android:padding="10dp"
+            android:src="@drawable/ic_paint_color_picker" />
+
+        <ImageButton
+            android:id="@+id/iv_paint_undo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/transparent"
+            android:padding="10dp"
+            android:src="@drawable/ic_paint_redo" />
+
+        <ImageButton
+            android:id="@+id/iv_paint_redo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/transparent"
+            android:padding="10dp"
+            android:rotation="180"
+            android:src="@drawable/ic_paint_redo" />
+
+        <ImageButton
+            android:id="@+id/iv_paint_recycler"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="24dp"
+            android:background="@color/transparent"
+            android:padding="10dp"
+            android:src="@drawable/ic_paint_recycler" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btn_paint_panel"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/transparent"
+        android:src="@drawable/ic_paint_pencil_gray"
+        android:text="CLEAR" />
+
+
+</RelativeLayout>
